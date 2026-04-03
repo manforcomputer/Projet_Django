@@ -7,5 +7,8 @@ class Pizza(models.Model):
     prix = models.FloatField(default=0)
     vegetarienne = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.nom
+
 
 

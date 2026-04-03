@@ -16,8 +16,14 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.views.generic import RedirectView  # Ajoute cet import
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("menu/", include("menu.urls")),
+
+    # Ajoute cette ligne pour rediriger la racine vers /menu/
+    path('', RedirectView.as_view(url='/menu/', permanent=False)),
 ]
