@@ -1,23 +1,6 @@
-# Django
 db.sqlite3
-*.log
-*.pot
-*.pyc
 __pycache__/
-media/
-staticfiles/
-
-# Mac
+*.pyc
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Environment
-.venv/
-venv/
-ENV/
-
-# IDE
-.vscode/
-.idea/
-*.swp
+migrations/
+.env
